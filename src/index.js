@@ -1,22 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { QueryClientProvider, QueryClient } from 'react-query';
-
 import { BrowserRouter as Router } from 'react-router-dom';
+import EndPointsContextProvider from './store/EndPointsContextProvider';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-const queryClient = new QueryClient()
-
+const queryClient = new QueryClient();
 
 ReactDOM.render(
-	<QueryClientProvider client={queryClient}>
-		<Router>
-			<React.StrictMode>
-				<App />
-			</React.StrictMode>
-		</Router>
-	</QueryClientProvider>,
+	<EndPointsContextProvider>
+		<QueryClientProvider client={queryClient}>
+			<Router>
+				<React.StrictMode>
+					<App />
+				</React.StrictMode>
+			</Router>
+		</QueryClientProvider>
+	</EndPointsContextProvider>,
 	document.getElementById('root')
 );
 

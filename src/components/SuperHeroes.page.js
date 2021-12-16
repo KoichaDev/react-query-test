@@ -1,12 +1,17 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
+import endPointContext from 'store/end-points-context';
 import axios from 'axios'
 
 export const SuperHeroesPage = () => {
   const [isLoading, setIsLoading] = useState(true)
   const [data, setData] = useState([])
 
+  const endPointCtx = useContext(endPointContext)
+
+  const url = endPointCtx.superHeroes;
+
   useEffect(() => {
-    axios.get('http://localhost:4000/superheroes').then(res => {
+    axios.get(url).then(res => {
       setData(res.data)
       setIsLoading(false)
     })
