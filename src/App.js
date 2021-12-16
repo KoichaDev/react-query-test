@@ -5,11 +5,9 @@ import { RQSuperHeroesPage } from './components/RQSuperHeroes.page';
 import { SuperHeroesPage } from './components/SuperHeroes.page';
 import Navbar from './components/Parts/Navbar';
 
-
 function App() {
 	return (
 		<>
-		
 			<Navbar />
 			<Switch>
 				<Route path='/super-heroes'>
