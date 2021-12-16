@@ -3,12 +3,15 @@ import fetchSuperHeroes from './services/fetch-super-heroes';
 
 export const RQSuperHeroesPage = () => {
 	const { getData } = fetchSuperHeroes();
-
 	// Here, we don't need to manage the state variables and using the useEffect
-	const { isLoading, data } = useQuery('super-heroes', getData);
+	const { isLoading, data, isError, error } = useQuery('super-heroes', getData);
 
 	if (isLoading) {
 		return <h2>Loading...</h2>;
+	}
+
+	if(isError) {
+		return <h2>{error.message}</h2>
 	}
 
 	return (
