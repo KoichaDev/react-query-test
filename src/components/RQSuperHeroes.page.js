@@ -4,11 +4,11 @@ import fetchSuperHeroes from './services/fetch-super-heroes';
 export const RQSuperHeroesPage = () => {
 	const onSuccess = (data) => {
 		console.log('Perfom side effects after data fetching', data);
-	}
+	};
 
 	const onError = (error) => {
 		console.log('Perfom side effects after encountering error', error);
-	}
+	};
 
 	const { getData } = fetchSuperHeroes();
 	// Here, we don't need to manage the state variables and using the useEffect
@@ -29,6 +29,11 @@ export const RQSuperHeroesPage = () => {
 		// enabled: false, // Inform react query not to fire the get request when the component mounts,
 		onSuccess,
 		onError,
+		select: (data) => {
+			// select automatically recieves the api data as an argument. The "data" parameeter on callback is our "response"
+			const superHeroesNames = data.data.map((hero) => hero.name);
+			return superHeroesNames;
+		},
 	});
 
 	if (isLoading || isFetching) {
@@ -45,9 +50,12 @@ export const RQSuperHeroesPage = () => {
 			<button type='button' onClick={refetch}>
 				Fetch Heroes
 			</button>
-			{data?.data.map((hero) => {
-				return <div key={hero.name}>{hero.name}</div>;
+			{data.map((heroName) => {
+				return <div key={heroName}>{heroName}</div>;
 			})}
+			{/* {data?.data.map((hero) => {
+				return <div key={hero.name}>{hero.name}</div>;
+			})} */}
 		</>
 	);
 };
