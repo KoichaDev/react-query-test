@@ -1,6 +1,7 @@
 import { Switch, Route } from 'react-router-dom';
 import './App.css';
 import HomePage from './components/Pages/Home';
+import DependentQueriesPage from './components/Pages/DependentQueries'
 import DynamicParallellPage from './components/Pages/DynamicParallell.js';
 import ParallelQueriesPage from './components/Pages/ParallelQueries';
 import SuperHeroesPage from './components/Pages/SuperHeroes';
@@ -13,6 +14,9 @@ function App() {
 		<>
 			<Navbar />
 			<Switch>
+				<Route path='/rq-dependent'>
+					<DependentQueriesPage email='example@example.com' />
+				</Route>
 				<Route path='/rq-dynamic-parallel' exact>
 					<DynamicParallellPage heroIds={[1, 3]} />
 				</Route>
