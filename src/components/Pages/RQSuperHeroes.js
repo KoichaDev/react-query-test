@@ -1,6 +1,6 @@
-import useSuperHeroesData from "../hooks/useSuperHeroesData";
+import useSuperHeroesData from "../../hooks/useSuperHeroesData";
 
-export const RQSuperHeroesPage = () => {
+const RQSuperHeroesPage = () => {
 	const onSuccess = (data) => {
 		console.log('Perfom side effects after data fetching', data);
 	};
@@ -42,3 +42,5 @@ export const RQSuperHeroesPage = () => {
 		</>
 	);
 };
+
+export default RQSuperHeroesPage;

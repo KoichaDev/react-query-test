@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from 'react';
 import endPointContext from 'stores/end-points-context';
 import axios from 'axios';
 
-export const SuperHeroesPage = () => {
+const SuperHeroesPage = () => {
 	const [isLoading, setIsLoading] = useState(true);
 	const [data, setData] = useState([]);
 	const [error, setError] = useState('');
@@ -41,3 +41,5 @@ export const SuperHeroesPage = () => {
 		</>
 	);
 };
+
+export default SuperHeroesPage;

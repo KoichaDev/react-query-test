@@ -1,8 +1,8 @@
 import { Switch, Route } from 'react-router-dom';
 import './App.css';
-import { HomePage } from './components/Home.page';
-import { RQSuperHeroesPage } from './components/RQSuperHeroes.page';
-import { SuperHeroesPage } from './components/SuperHeroes.page';
+import HomePage from './components/Pages/Home';
+import SuperHeroesPage from './components/Pages/SuperHeroes';
+import RQSuperHeroesPage from './components/Pages/RQSuperHeroes';
 import Navbar from './components/Parts/Navbar';
 
 function App() {
