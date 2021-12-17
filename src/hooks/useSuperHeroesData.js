@@ -15,11 +15,11 @@ const useSuperHeroesData = (onSuccess, onError) => {
 		// enabled: false, // Inform react query not to fire the get request when the component mounts,
 		onSuccess,
 		onError,
-		select: (data) => {
-			// select automatically recieves the api data as an argument. The "data" parameeter on callback is our "response"
-			const superHeroesNames = data.data.map((hero) => hero.name);
-			return superHeroesNames;
-		},
+		// select: (data) => {
+		// 	// select automatically recieves the api data as an argument. The "data" parameeter on callback is our "response"
+		// 	const superHeroesNames = data.data.map((hero) => hero.name);
+		// 	return superHeroesNames;
+		// },
 	});
 };
 
