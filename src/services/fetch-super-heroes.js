@@ -6,7 +6,7 @@ const FetchSuperHeroes = () => {
 	const endPointCtx = useContext(endPointContext);
 
 	const getData = () => axios.get(endPointCtx.superHeroes);
-	const getDataById = () => axios.get(endPointCtx.superHeroId)
+	const getDataById = (heroId) => axios.get(endPointCtx.superHeroId(heroId))
 
 	return { getData, getDataById };
 };
