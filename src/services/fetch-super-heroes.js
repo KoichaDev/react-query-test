@@ -4,11 +4,11 @@ import axios from 'axios';
 
 const FetchSuperHeroes = () => {
 	const endPointCtx = useContext(endPointContext);
-	const url = endPointCtx.superHeroes;
 
-	const getData = () => axios.get(url);
+	const getData = () => axios.get(endPointCtx.superHeroes);
+	const getDataById = () => axios.get(endPointCtx.superHeroId)
 
-	return { getData };
+	return { getData, getDataById };
 };
 
 export default FetchSuperHeroes;

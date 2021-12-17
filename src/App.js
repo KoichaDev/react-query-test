@@ -11,7 +11,7 @@ function App() {
 		<>
 			<Navbar />
 			<Switch>
-				<Route path='/rq-super-heroes/:heroId'>
+				<Route path='/rq-super-heroes/:heroId' exact>
 					<RQSuperHeroePage />
 				</Route>
 				<Route path='/super-heroes'>

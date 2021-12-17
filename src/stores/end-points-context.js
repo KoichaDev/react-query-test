@@ -1,7 +1,8 @@
 import React from 'react'
 
 const endPointsContext = React.createContext({
-    superHeroes: 'http://localhost:4000/superheroes',
+    superHeroes: '',
+    superHeroId: '',
 });
 
 export default endPointsContext;
