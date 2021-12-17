@@ -1,7 +1,5 @@
 import { useContext } from 'react';
-import { useQuery } from 'react-query';
 import endPointContext from 'stores/end-points-context';
-
 import axios from 'axios';
 
 const FetchSuperHeroes = () => {

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { QueryClientProvider, QueryClient } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import { BrowserRouter as Router } from 'react-router-dom';
-import EndPointsContextProvider from './store/EndPointsContextProvider';
+import EndPointsContextProvider from './stores/EndPointsContextProvider';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';

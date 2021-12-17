@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from 'react';
-import endPointContext from 'store/end-points-context';
+import endPointContext from 'stores/end-points-context';
 import axios from 'axios';
 
 export const SuperHeroesPage = () => {
