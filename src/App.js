@@ -1,7 +1,8 @@
 import { Switch, Route } from 'react-router-dom';
 import './App.css';
 import HomePage from './components/Pages/Home';
-import ParallelQueriesPage from './components/Pages/ParallelQueries'
+import DynamicParallellPage from './components/Pages/DynamicParallell.js';
+import ParallelQueriesPage from './components/Pages/ParallelQueries';
 import SuperHeroesPage from './components/Pages/SuperHeroes';
 import RQSuperHeroePage from './components/Pages/RQSuperHero';
 import RQSuperHeroesPage from './components/Pages/RQSuperHeroes';
@@ -12,6 +13,9 @@ function App() {
 		<>
 			<Navbar />
 			<Switch>
+				<Route path='/rq-dynamic-parallel' exact>
+					<DynamicParallellPage heroIds={[1, 3]} />
+				</Route>
 				<Route path='/rq-parallel' exact>
 					<ParallelQueriesPage />
 				</Route>
