@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 const endPointsContext = React.createContext({
-    superHeroes: '',
-    superHeroId: '',
+	superHeroes: '',
+	superHeroId: '',
+	colors: '',
 });
 
 export default endPointsContext;

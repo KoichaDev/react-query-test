@@ -42,5 +42,35 @@
 			"id": "blah blah",
 			"courses": ["React", "Vue", "Angular"]
 		}
+	],
+	"colors": [
+		{
+			"id": 1,
+			"label": "red"
+		},
+		{
+			"id": 2,
+			"label": "blue"
+		},
+		{
+			"id": 3,
+			"label": "green"
+		},
+		{
+			"id": 4,
+			"label": "pink"
+		},
+		{
+			"id": 5,
+			"label": "teal"
+		},
+		{
+			"id": 6,
+			"label": "black"
+		},
+		{
+			"id": 7,
+			"label": "white"
+		}
 	]
 }

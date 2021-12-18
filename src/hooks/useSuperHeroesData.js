@@ -3,6 +3,8 @@ import fetchSuperHeroes from '../services/fetch-super-heroes';
 
 const useSuperHeroesData = (onSuccess, onError) => {
 	const { getData } = fetchSuperHeroes();
+
+	console.log(getData);
 	
 
 	return useQuery('super-heroes', getData, {

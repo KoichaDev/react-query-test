@@ -9,6 +9,9 @@ const Navbar = () => {
 					<Link to='/'>Home</Link>
 				</li>
 				<li>
+					<Link to='/rq-paginated'>Pagination Color</Link>
+				</li>
+				<li>
 					<Link to='/super-heroes'>Traditional Super Heroes</Link>
 				</li>
 				<li>

@@ -7,6 +7,7 @@ import ParallelQueriesPage from './components/Pages/ParallelQueries';
 import SuperHeroesPage from './components/Pages/SuperHeroes';
 import RQSuperHeroePage from './components/Pages/RQSuperHero';
 import RQSuperHeroesPage from './components/Pages/RQSuperHeroes';
+import PaginatedQueriesPage from './components/Pages/PaginatedQueries'
 import Navbar from './components/Parts/Navbar';
 
 function App() {
@@ -14,6 +15,9 @@ function App() {
 		<>
 			<Navbar />
 			<Switch>
+				<Route path='/rq-paginated' exact>
+					<PaginatedQueriesPage />
+				</Route>
 				<Route path='/rq-dependent'>
 					<DependentQueriesPage email='example@example.com' />
 				</Route>
