@@ -34,9 +34,20 @@ export const useAddSuperHeroData = () => {
 	const queryClient = useQueryClient()
 
 	return useMutation(addSuperHero, {
-		onSuccess: () => {
+		onSuccess: (data) => {
 			// By using the same key 'super-heroes', React Query will refetch automatically when doing POST request
-			queryClient.invalidateQueries('super-heroes')
+			// queryClient.invalidateQueries('super-heroes')
+			
+			// This is to update the query cache by saving the network request instead of network have to "refetch" the newest update
+			queryClient.setQueriesData('super-heroes', (oldQueryData) => {
+				return {
+					...oldQueryData, // getting copy from the old data
+					data: [
+						...oldQueryData.data, // This refers to "old/current" state from previous super heroes
+						data.data // This refers "new" data from the mutation response (POST request)
+					]
+				}
+			})
 		}
 	});
 };
