@@ -1,11 +1,12 @@
-import { useQuery } from 'react-query';
-import fetchSuperHeroes from '../services/fetch-super-heroes';
+import { useContext } from 'react';
+import endPointContext from 'stores/end-points-context';
+import { useQuery, useMutation } from 'react-query';
+import axios from 'axios';
 
-const useSuperHeroesData = (onSuccess, onError) => {
-	const { getData } = fetchSuperHeroes();
+export const useSuperHeroesData = (onSuccess, onError) => {
+	const endPointCtx = useContext(endPointContext);
 
-	console.log(getData);
-	
+	const getData = () => axios.get(endPointCtx.superHeroes);
 
 	return useQuery('super-heroes', getData, {
 		// cacheTime: 5000, // Manipulating how long the caching of the fetch will live on the memory. Default value is 5 minutes
@@ -25,4 +26,10 @@ const useSuperHeroesData = (onSuccess, onError) => {
 	});
 };
 
-export default useSuperHeroesData;
+export const useAddSuperHeroData = () => {
+	const endPointCtx = useContext(endPointContext);
+
+	const addSuperHero = (heroValues) => axios.post(endPointCtx.superHeroes, heroValues);
+
+	return useMutation(addSuperHero);
+};

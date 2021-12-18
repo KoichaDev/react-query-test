@@ -1,76 +1,99 @@
 {
-	"superheroes": [
-		{
-			"id": 1,
-			"name": "Batman",
-			"alterEgo": "Bruce Wayne"
-		},
-		{
-			"id": 2,
-			"name": "Superman",
-			"alterEgo": "Clark Kent"
-		},
-		{
-			"id": 3,
-			"name": "Wonder Woman",
-			"alterEgo": "Princess Diana"
-		}
-	],
-	"friends": [
-		{
-			"id": 1,
-			"name": "James Joe"
-		},
-		{
-			"id": 2,
-			"name": "Smokey Junior"
-		},
-
-		{
-			"id": 3,
-			"name": "Hathfield Cumberchat"
-		}
-	],
-	"users": [
-		{
-			"id": "example@example.com",
-			"channelId": "blah blah"
-		}
-	],
-	"channels": [
-		{
-			"id": "blah blah",
-			"courses": ["React", "Vue", "Angular"]
-		}
-	],
-	"colors": [
-		{
-			"id": 1,
-			"label": "red"
-		},
-		{
-			"id": 2,
-			"label": "blue"
-		},
-		{
-			"id": 3,
-			"label": "green"
-		},
-		{
-			"id": 4,
-			"label": "pink"
-		},
-		{
-			"id": 5,
-			"label": "teal"
-		},
-		{
-			"id": 6,
-			"label": "black"
-		},
-		{
-			"id": 7,
-			"label": "white"
-		}
-	]
+  "superheroes": [
+    {
+      "id": 1,
+      "name": "Batman",
+      "alterEgo": "Bruce Wayne"
+    },
+    {
+      "id": 2,
+      "name": "Superman",
+      "alterEgo": "Clark Kent"
+    },
+    {
+      "id": 3,
+      "name": "Wonder Woman",
+      "alterEgo": "Princess Diana"
+    },
+    {
+      "name": "Flash",
+      "alterEgo": "Barry Allen",
+      "id": 4
+    },
+    {
+      "name": "haha",
+      "alterEgo": "hoho",
+      "id": 5
+    },
+    {
+      "name": "yoy",
+      "alterEgo": "haha",
+      "id": 6
+    },
+    {
+      "name": "aasd",
+      "alterEgo": "asd",
+      "id": 7
+    }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "name": "James Joe"
+    },
+    {
+      "id": 2,
+      "name": "Smokey Junior"
+    },
+    {
+      "id": 3,
+      "name": "Hathfield Cumberchat"
+    }
+  ],
+  "users": [
+    {
+      "id": "example@example.com",
+      "channelId": "blah blah"
+    }
+  ],
+  "channels": [
+    {
+      "id": "blah blah",
+      "courses": [
+        "React",
+        "Vue",
+        "Angular"
+      ]
+    }
+  ],
+  "colors": [
+    {
+      "id": 1,
+      "label": "red"
+    },
+    {
+      "id": 2,
+      "label": "blue"
+    },
+    {
+      "id": 3,
+      "label": "green"
+    },
+    {
+      "id": 4,
+      "label": "pink"
+    },
+    {
+      "id": 5,
+      "label": "teal"
+    },
+    {
+      "id": 6,
+      "label": "black"
+    },
+    {
+      "id": 7,
+      "label": "white"
+    }
+  ]
 }

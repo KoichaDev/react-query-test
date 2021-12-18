@@ -1,8 +1,11 @@
+import { useContext } from 'react';
+import endPointContext from 'stores/end-points-context';
 import { useQuery, useQueryClient } from 'react-query';
-import fetchSuperHeroes from '../services/fetch-super-heroes';
+import axios from 'axios';
 
 const useSuperHeroData = (heroId) => {
-	const { getDataById } = fetchSuperHeroes();
+	const endPointCtx = useContext(endPointContext);
+	const getDataById = (heroId) => axios.get(endPointCtx.superHeroId(heroId))
 
 	const queryClient = useQueryClient();
 
