@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import endPointContext from 'stores/end-points-context';
-import { useQuery, useMutation } from 'react-query';
+import { useQuery, useMutation, useQueryClient } from 'react-query';
 import axios from 'axios';
 
 export const useSuperHeroesData = (onSuccess, onError) => {
@@ -31,5 +31,12 @@ export const useAddSuperHeroData = () => {
 
 	const addSuperHero = (heroValues) => axios.post(endPointCtx.superHeroes, heroValues);
 
-	return useMutation(addSuperHero);
+	const queryClient = useQueryClient()
+
+	return useMutation(addSuperHero, {
+		onSuccess: () => {
+			// By using the same key 'super-heroes', React Query will refetch automatically when doing POST request
+			queryClient.invalidateQueries('super-heroes')
+		}
+	});
 };
